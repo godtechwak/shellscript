@@ -13,7 +13,7 @@ add_count=3000
 
 for (( ; ; ))
 do
-   MYSQL_PWD='{패스워드}' mysql -h{DB서버주소} -uadmin --comments -e "update test.test set seq=0 where id between ${front_id} and ${back_id}"
+   MYSQL_PWD='{패스워드}' mysql -h{DB서버주소} -uadmin -D {DB명} --comments -e "update test set seq=0 where id between ${front_id} and ${back_id}"
 
    if [ ${max_id} -lt ${back_id} ]
    then
