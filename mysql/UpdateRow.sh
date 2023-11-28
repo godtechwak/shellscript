@@ -9,7 +9,7 @@ END
 front_id=1000
 back_id=4000
 max_id=10000
-add_count=3000
+chunk=3000
 
 for (( ; ; ))
 do
@@ -24,6 +24,6 @@ do
    echo ${front_id}
    echo ${back_id}
    echo "==========="
-   front_id=$((front_id+add_count))
-   back_id=$((back_id+add_count))
+   front_id=$((front_id+chunk))
+   back_id=$((back_id+chunk))
 done
